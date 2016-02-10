@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:tiles="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.thymeleaf.org"
+	  >
+<head>
+	<title>Connect with OpenID</title>
+</head>
+
+<body>
+	<p>Connect with OpenID</p>
+	<form name="openid" th:action="@{/connect/openid}" id="openid" method="get">
+		<fieldset>
+			<input type="text" name="openid_identifier" value="http://steamcommunity.com/openid" />
+			<button type="submit" class="btn">Login with OpenID</button>
+		</fieldset>
+	</form>
+</body>
+</html>

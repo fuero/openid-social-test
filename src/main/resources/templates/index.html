@@ -1,0 +1,27 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:tiles="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.thymeleaf.org"
+	  layout:decorator="layout"
+	  >
+<head>
+	<title>Index Page</title>
+</head>
+
+<body>
+	<section layout:fragment="content">
+   	<form name="openid" th:action="@{/connect/openid}" id="openid" method="get">
+	<fieldset>
+		<input type="text" name="openid_identifier" value="http://steamcommunity.com/openid" />
+		<button type="submit" class="btn">Connect with OpenID</button>
+	</fieldset>
+	</form>
+	<form name="openid-auth" th:action="@{/signin/openid}" id="openid-auth" method="get">
+	<fieldset>
+		<input type="text" name="openid_identifier" value="http://steamcommunity.com/openid" />
+		<button type="submit" class="btn">Sign in with OpenID</button>
+	</fieldset>
+	</form>
+    </section>
+</body>
+</html>
